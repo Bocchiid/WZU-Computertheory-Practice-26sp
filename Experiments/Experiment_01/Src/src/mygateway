@@ -1,0 +1,20 @@
+#!/bin/sh /etc/rc.common
+
+START=100
+STOP=15
+
+start() {
+	echo "Start mygateway!"
+	service_start /usr/bin/mygateway &
+}
+
+stop() {
+	echo "Stop mygateway!"
+	service_stop /usr/bin/mygateway
+}
+
+restart() {
+	echo "Restart mygateway!"
+	service_stop /usr/bin/mygateway
+	service_start /usr/bin/mygateway &
+}
