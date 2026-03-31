@@ -1,8 +1,4 @@
-# WZU-Computertheory-Practice-26sp
+# Experiments Set
 
-## WZU Computertheory Practice 26sp
-### 包含
-1. 2次实验
-2. 2份实验报告模板
-
-## 仅供参考 学习交流 严禁抄袭
+1. OpenWrt移植与软件包开发
+2. MQTT云平台部署与边缘端通信开发
