@@ -1,0 +1,30 @@
+#!/bin/sh /etc/rc.common
+
+START=100
+STOP=15
+
+wait_and_start() {
+    echo "--- [MyGateway Boot] Entering 30s brute-force delay ---" > /dev/console
+    # 暴力等待 30 秒，确保 DHCP 和所有网络接口完全 Ready
+    sleep 30
+    
+    echo "--- [MyGateway Boot] Delay finished, start mygateway ---" > /dev/console
+    # 将输出重定向到控制台，这样你不用回车也能看到结果
+    service_start /usr/bin/mygateway > /dev/console 2>&1 &
+}
+
+start() {
+    echo "Start mygateway!"
+    (wait_and_start) &  # 在后台运行，确保不会阻塞系统启动过程
+}
+
+stop() {
+    echo "Stop mygateway!"
+    service_stop /usr/bin/mygateway
+}
+
+restart() {
+    echo "Restart mygateway!"
+    service_stop /usr/bin/mygateway
+    service_start /usr/bin/mygateway &
+}
