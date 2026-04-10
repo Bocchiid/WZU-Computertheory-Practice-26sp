@@ -1,0 +1,1828 @@
+[
+    {
+        "id": "9f8f6a74d0434b79",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "86a9cfeef62f1566",
+        "type": "mqtt-broker",
+        "name": "本地连接",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "25398022363ee1a1",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "b44a209b5c78d267",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "4fa7aac3b48d9998",
+        "type": "ui-page",
+        "name": "传感器监控",
+        "ui": "25398022363ee1a1",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "b44a209b5c78d267",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "bda6d5ec841749c1",
+        "type": "ui-group",
+        "name": "传感器监控",
+        "page": "4fa7aac3b48d9998",
+        "width": 6,
+        "height": "6",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "12e4a5cde80fd9d9",
+        "type": "ui-page",
+        "name": "实时曲线",
+        "ui": "25398022363ee1a1",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "b44a209b5c78d267",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "dd22ca563685bbb2",
+        "type": "ui-group",
+        "name": "实时曲线",
+        "page": "12e4a5cde80fd9d9",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "2b4f9c41cd16ae9b",
+        "type": "sqlitedb",
+        "db": "D:/sensor.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "b4324e31e26b9a2a",
+        "type": "ui-page",
+        "name": "历史数据",
+        "ui": "25398022363ee1a1",
+        "path": "/page3",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "b44a209b5c78d267",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": -1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "72f0cad1154b4f19",
+        "type": "ui-group",
+        "name": "历史数据",
+        "page": "b4324e31e26b9a2a",
+        "width": "10",
+        "height": 1,
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b7edebfda8b4e54a",
+        "type": "mqtt in",
+        "z": "9f8f6a74d0434b79",
+        "name": "",
+        "topic": "group1/gateway001/+/status",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "86a9cfeef62f1566",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 660,
+        "wires": [
+            [
+                "726722964e7d507a",
+                "c167ece3aac971a6"
+            ]
+        ]
+    },
+    {
+        "id": "726722964e7d507a",
+        "type": "switch",
+        "z": "9f8f6a74d0434b79",
+        "name": "路由",
+        "property": "msg.topic",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "group1/gateway001/0/status",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "group1/gateway001/1/status",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "group1/gateway001/2/status",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "group1/gateway001/3/status",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "group1/gateway001/4/status",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "group1/gateway001/5/status",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "group1/gateway001/6/status",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "79ded3e78209c808"
+            ],
+            [
+                "8b83956adb12672b"
+            ],
+            [
+                "4d06269d661883cf"
+            ],
+            [
+                "52d1877c615eb2ff"
+            ],
+            [
+                "881c65e8adf00e87"
+            ],
+            [
+                "796759cbd53e53f7"
+            ],
+            [
+                "9f44734904af3afa"
+            ]
+        ]
+    },
+    {
+        "id": "79ded3e78209c808",
+        "type": "ui-gauge",
+        "z": "9f8f6a74d0434b79",
+        "name": "温度",
+        "group": "bda6d5ec841749c1",
+        "order": 12,
+        "value": "payload.temperature",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "温度",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "-40",
+                "color": "#0a43f0",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "-20",
+                "color": "#58d5cd",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "0",
+                "color": "#1ab706",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "20",
+                "color": "#ecf00a",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "40",
+                "color": "#e8b017",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "60",
+                "color": "#e81717",
+                "text": "",
+                "textType": "value"
+            }
+        ],
+        "min": "-40",
+        "max": "60",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 710,
+        "y": 300,
+        "wires": [
+            [
+                "5ddad718afa8b374",
+                "add063d062806d2a"
+            ]
+        ]
+    },
+    {
+        "id": "8b83956adb12672b",
+        "type": "ui-gauge",
+        "z": "9f8f6a74d0434b79",
+        "name": "湿度",
+        "group": "bda6d5ec841749c1",
+        "order": 11,
+        "value": "payload.humidity",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "湿度",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0a43f0",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "20",
+                "color": "#58d5cd",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "40",
+                "color": "#1ab706",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "60",
+                "color": "#ecf00a",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "80",
+                "color": "#e8b017",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "100",
+                "color": "#e81717",
+                "text": "",
+                "textType": "value"
+            }
+        ],
+        "min": "0",
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "057c71bd4ce172c4",
+                "ea6cc4515368a23c"
+            ]
+        ]
+    },
+    {
+        "id": "4d06269d661883cf",
+        "type": "ui-gauge",
+        "z": "9f8f6a74d0434b79",
+        "name": "光照",
+        "group": "bda6d5ec841749c1",
+        "order": 10,
+        "value": "payload.illuminance",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "光照",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#0a43f0",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "200",
+                "color": "#58d5cd",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "400",
+                "color": "#1ab706",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "600",
+                "color": "#ecf00a",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "800",
+                "color": "#e8b017",
+                "text": "",
+                "textType": "value"
+            },
+            {
+                "from": "1000",
+                "color": "#e81717",
+                "text": "",
+                "textType": "value"
+            }
+        ],
+        "min": "0",
+        "max": "1000",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "46b7a8c87d364bb5",
+                "d74f85434f4bf68b"
+            ]
+        ]
+    },
+    {
+        "id": "6108f7b8d186522e",
+        "type": "ui-switch",
+        "z": "9f8f6a74d0434b79",
+        "name": "门",
+        "label": "门",
+        "group": "bda6d5ec841749c1",
+        "order": 9,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "none",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "none",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 910,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52d1877c615eb2ff",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.door;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 440,
+        "wires": [
+            [
+                "6108f7b8d186522e"
+            ]
+        ]
+    },
+    {
+        "id": "799c2feebec5f504",
+        "type": "ui-switch",
+        "z": "9f8f6a74d0434b79",
+        "name": "灯",
+        "label": "灯",
+        "group": "bda6d5ec841749c1",
+        "order": 14,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "none",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "77dbce670c0eb63c"
+            ]
+        ]
+    },
+    {
+        "id": "881c65e8adf00e87",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 2",
+        "func": "msg.payload = msg.payload.light;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 500,
+        "wires": [
+            [
+                "799c2feebec5f504"
+            ]
+        ]
+    },
+    {
+        "id": "64dcd739d109853b",
+        "type": "ui-switch",
+        "z": "9f8f6a74d0434b79",
+        "name": "空调",
+        "label": "空调",
+        "group": "bda6d5ec841749c1",
+        "order": 13,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "none",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 910,
+        "y": 560,
+        "wires": [
+            [
+                "a11067a5e0dbfe56"
+            ]
+        ]
+    },
+    {
+        "id": "796759cbd53e53f7",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 4",
+        "func": "msg.payload = msg.payload.ac_power;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 560,
+        "wires": [
+            [
+                "64dcd739d109853b"
+            ]
+        ]
+    },
+    {
+        "id": "f92ca7927ec4e144",
+        "type": "ui-slider",
+        "z": "9f8f6a74d0434b79",
+        "group": "bda6d5ec841749c1",
+        "name": "窗帘",
+        "label": "窗帘",
+        "tooltip": "",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "outs": "end",
+        "topic": "group1/gateway001/6/command",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": 0,
+        "max": "100",
+        "step": "10",
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": true,
+        "x": 910,
+        "y": 620,
+        "wires": [
+            [
+                "9f9de459b553348c"
+            ]
+        ]
+    },
+    {
+        "id": "9f44734904af3afa",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 6",
+        "func": "msg.payload = msg.payload.curtain;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 620,
+        "wires": [
+            [
+                "f92ca7927ec4e144"
+            ]
+        ]
+    },
+    {
+        "id": "5ddad718afa8b374",
+        "type": "ui-chart",
+        "z": "9f8f6a74d0434b79",
+        "group": "dd22ca563685bbb2",
+        "name": "温度实时曲线",
+        "label": "温度实时曲线",
+        "order": 1,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "时间",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "温度（℃）",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "-40",
+        "ymax": "60",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "50",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": "4",
+        "className": "",
+        "interpolation": "linear",
+        "x": 880,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "057c71bd4ce172c4",
+        "type": "ui-chart",
+        "z": "9f8f6a74d0434b79",
+        "group": "dd22ca563685bbb2",
+        "name": "湿度实时曲线",
+        "label": "湿度实时曲线",
+        "order": 6,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "时间",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "湿度（%）",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "50",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": "4",
+        "className": "",
+        "interpolation": "linear",
+        "x": 880,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46b7a8c87d364bb5",
+        "type": "ui-chart",
+        "z": "9f8f6a74d0434b79",
+        "group": "dd22ca563685bbb2",
+        "name": "光照实时曲线",
+        "label": "光照实时曲线",
+        "order": 5,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "时间",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "光照强度（lux）",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "0",
+        "ymax": "1000",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "50",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": "4",
+        "className": "",
+        "interpolation": "linear",
+        "x": 880,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "08d1b397b6fda416",
+        "type": "mqtt out",
+        "z": "9f8f6a74d0434b79",
+        "name": "",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "86a9cfeef62f1566",
+        "x": 1230,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "77dbce670c0eb63c",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 3",
+        "func": "msg.payload = {\n    \"light\": msg.payload // msg.payload 为 true 或 false\n};\nmsg.topic = \"group1/gateway001/4/command\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 500,
+        "wires": [
+            [
+                "08d1b397b6fda416"
+            ]
+        ]
+    },
+    {
+        "id": "a11067a5e0dbfe56",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 5",
+        "func": "msg.payload = {\n    \"ac_power\": msg.payload // msg.payload 为 true 或 false\n};\nmsg.topic = \"group1/gateway001/5/command\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 560,
+        "wires": [
+            [
+                "08d1b397b6fda416"
+            ]
+        ]
+    },
+    {
+        "id": "9f9de459b553348c",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 7",
+        "func": "msg.payload = {\n    \"curtain\": msg.payload // msg.payload 为 true 或 false\n};\nmsg.topic = \"group1/gateway001/6/command\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 620,
+        "wires": [
+            [
+                "08d1b397b6fda416"
+            ]
+        ]
+    },
+    {
+        "id": "6c5ec6b317bdf03c",
+        "type": "sqlite",
+        "z": "9f8f6a74d0434b79",
+        "mydb": "2b4f9c41cd16ae9b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "数据库",
+        "x": 650,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20f8a81f9b5939b6",
+        "type": "inject",
+        "z": "9f8f6a74d0434b79",
+        "name": "inject",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "CREATE TABLE IF NOT EXISTS sensor_data(id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp INTEGER NOT NULL, gateway_id TEXT NOT NULL, device_id TEXT NOT NULL, value REAL NOT NULL)",
+        "x": 510,
+        "y": 740,
+        "wires": [
+            [
+                "6c5ec6b317bdf03c"
+            ]
+        ]
+    },
+    {
+        "id": "c167ece3aac971a6",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 8",
+        "func": "// 1. 解析 topic, 提取 gateway_id 和 device_id\nlet topicParts = msg.topic.split('/');\nlet gatewayId = topicParts[1];\nlet deviceId = topicParts[2];\n// 2. 提取数值 (支持 number, boolean, 对象)\nlet rawValue = null;\nif (msg.payload !== undefined && msg.payload !== null) {\n    if (typeof msg.payload === 'number') {\n        rawValue = msg.payload;\n    }\n    else if (typeof msg.payload === 'boolean') {\n        rawValue = msg.payload ? 1 : 0;\n    }\n    else if (typeof msg.payload === 'object') {\n        // 取对象的第一个数值 (忽略键名)\n        let values = Object.values(msg.payload);\n        if (values.length > 0) {\n            let firstVal = values[0];\n            if (typeof firstVal === 'number') {\n                rawValue = firstVal;\n            } else if (typeof firstVal === 'boolean') {\n                rawValue = firstVal ? 1 : 0;\n            }\n        }\n    }\n}\n// 3. 校验字段完整性\nif (!gatewayId || !deviceId) {\n    node.warn(`Missing gatewayId or deviceId in topic: ${msg.topic}`);\n    return null;\n}\nif (rawValue === null || isNaN(rawValue)) {\n    node.warn(`Invalid value in payload: ${JSON.stringify(msg.payload)}`);\n    return null;\n}\n// 4. 构造 SQL INSERT 语句\nlet timestamp = Date.now();\nlet sql = `INSERT INTO sensor_data (timestamp, gateway_id, device_id, value) VALUES (${timestamp}, '${gatewayId}', '${deviceId}', ${rawValue})`;\nmsg.topic = sql;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 660,
+        "wires": [
+            [
+                "6c5ec6b317bdf03c"
+            ]
+        ]
+    },
+    {
+        "id": "5d2b61406acd0097",
+        "type": "inject",
+        "z": "9f8f6a74d0434b79",
+        "name": "inject",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "SELECT DISTINCT gateway_id FROM sensor_data ORDER BY gateway_id ASC",
+        "x": 510,
+        "y": 780,
+        "wires": [
+            [
+                "89ee098ef7c57411"
+            ]
+        ]
+    },
+    {
+        "id": "89ee098ef7c57411",
+        "type": "sqlite",
+        "z": "9f8f6a74d0434b79",
+        "mydb": "2b4f9c41cd16ae9b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "数据库",
+        "x": 630,
+        "y": 780,
+        "wires": [
+            [
+                "0c06bbd997beb126"
+            ]
+        ]
+    },
+    {
+        "id": "0c06bbd997beb126",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 9",
+        "func": "var options = [];\n\nif (msg.payload && msg.payload.length > 0) {\n    msg.payload.forEach(function(row) {\n        if (row.gateway_id) {\n            options.push({\n                label: row.gateway_id,\n                value: row.gateway_id\n            });\n        }\n    });\n}\n\nmsg.options = options;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 780,
+        "wires": [
+            [
+                "323da6ba05c64527"
+            ]
+        ]
+    },
+    {
+        "id": "323da6ba05c64527",
+        "type": "ui-dropdown",
+        "z": "9f8f6a74d0434b79",
+        "group": "72f0cad1154b4f19",
+        "name": "网关选择",
+        "label": "选择网关",
+        "tooltip": "",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 900,
+        "y": 780,
+        "wires": [
+            [
+                "5b70e6d30a849805"
+            ]
+        ]
+    },
+    {
+        "id": "5b70e6d30a849805",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 10",
+        "func": "context.flow.set('gatewayId', msg.payload);\nmsg.topic = `SELECT DISTINCT device_id FROM sensor_data WHERE gateway_id = '${msg.payload}'`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 780,
+        "wires": [
+            [
+                "6e3f66e278fb86bd"
+            ]
+        ]
+    },
+    {
+        "id": "6e3f66e278fb86bd",
+        "type": "sqlite",
+        "z": "9f8f6a74d0434b79",
+        "mydb": "2b4f9c41cd16ae9b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "数据库",
+        "x": 1190,
+        "y": 780,
+        "wires": [
+            [
+                "aff9183fbf50da72"
+            ]
+        ]
+    },
+    {
+        "id": "aff9183fbf50da72",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 11",
+        "func": "var options = [];\n\nif (msg.payload && msg.payload.length > 0) {\n    msg.payload.forEach(function(row) {\n        if (row.device_id) {\n            options.push({\n                label: row.device_id,\n                value: row.device_id\n            });\n        }\n    });\n}\nmsg.options = options;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 780,
+        "wires": [
+            [
+                "91934433e3fede1a"
+            ]
+        ]
+    },
+    {
+        "id": "91934433e3fede1a",
+        "type": "ui-dropdown",
+        "z": "9f8f6a74d0434b79",
+        "group": "72f0cad1154b4f19",
+        "name": "设备选择",
+        "label": "选择设备",
+        "tooltip": "",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 1480,
+        "y": 780,
+        "wires": [
+            [
+                "6d8bcb3a4f80aa10"
+            ]
+        ]
+    },
+    {
+        "id": "8d0fe3579412a310",
+        "type": "ui-text-input",
+        "z": "9f8f6a74d0434b79",
+        "group": "72f0cad1154b4f19",
+        "name": "开始时间",
+        "label": "开始时间",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "datetime-local",
+        "tooltip": "",
+        "delay": "0",
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": true,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 500,
+        "y": 840,
+        "wires": [
+            [
+                "a286619a9082c1f1"
+            ]
+        ]
+    },
+    {
+        "id": "2072f586d52d97ed",
+        "type": "ui-text-input",
+        "z": "9f8f6a74d0434b79",
+        "group": "72f0cad1154b4f19",
+        "name": "结束时间",
+        "label": "结束时间",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "datetime-local",
+        "tooltip": "",
+        "delay": "0",
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": true,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 500,
+        "y": 900,
+        "wires": [
+            [
+                "a39cbeaf653e67b0"
+            ]
+        ]
+    },
+    {
+        "id": "a286619a9082c1f1",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 12",
+        "func": "var timeStr = msg.payload;\nvar startTime = Math.floor(new Date(timeStr).getTime());\ncontext.flow.set(\"startTime\", startTime);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a39cbeaf653e67b0",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 13",
+        "func": "var timeStr = msg.payload;\nvar endTime = Math.floor(new Date(timeStr).getTime());\ncontext.flow.set(\"endTime\", endTime);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d8bcb3a4f80aa10",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 14",
+        "func": "context.flow.set(\"deviceId\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70447c5009b1dd71",
+        "type": "ui-chart",
+        "z": "9f8f6a74d0434b79",
+        "group": "72f0cad1154b4f19",
+        "name": "传感器曲线",
+        "label": "传感器历史曲线",
+        "order": 9007199254740991,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "时间",
+        "xAxisProperty": "timestamp",
+        "xAxisPropertyType": "property",
+        "xAxisType": "category",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "数值",
+        "yAxisProperty": "value",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "10",
+        "height": "4",
+        "className": "",
+        "interpolation": "linear",
+        "x": 1630,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99dba2f2a119e922",
+        "type": "ui-button",
+        "z": "9f8f6a74d0434b79",
+        "group": "72f0cad1154b4f19",
+        "name": "历史查询",
+        "label": "查询",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 960,
+        "y": 860,
+        "wires": [
+            [
+                "c501d914c9959c64"
+            ]
+        ]
+    },
+    {
+        "id": "c501d914c9959c64",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 15",
+        "func": "var gatewayId = context.flow.get(\"gatewayId\");\nvar deviceId = context.flow.get(\"deviceId\");\nvar startTime = context.flow.get(\"startTime\");\nvar endTime = context.flow.get(\"endTime\");\n// 确保所有参数都存在\nif (!gatewayId || !deviceId || !startTime || !endTime) {\n    msg.error = '缺少必要参数';\n    msg.params = {\n        gatewayId: gatewayId,\n        deviceId: deviceId,\n        startTime: startTime,\n        endTime: endTime\n    };\n    return msg;\n}\n// 生成 SQL 语句\nmsg.topic = `\n        SELECT timestamp, value\n        FROM sensor_data\n        WHERE gateway_id = '${gatewayId}'\n            AND device_id = '${deviceId}'\n            AND timestamp >= ${startTime}\n            AND timestamp <= ${endTime}\n        ORDER BY timestamp ASC\n`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 860,
+        "wires": [
+            [
+                "f56bfa3121cf39b8"
+            ]
+        ]
+    },
+    {
+        "id": "f56bfa3121cf39b8",
+        "type": "sqlite",
+        "z": "9f8f6a74d0434b79",
+        "mydb": "2b4f9c41cd16ae9b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "数据库",
+        "x": 1290,
+        "y": 860,
+        "wires": [
+            [
+                "6f3f09fd3cf02d6f"
+            ]
+        ]
+    },
+    {
+        "id": "6f3f09fd3cf02d6f",
+        "type": "function",
+        "z": "9f8f6a74d0434b79",
+        "name": "function 16",
+        "func": "for (var i = 0; i < msg.payload.length; i++){\n    msg.payload[i].timestamp = new Date(msg.payload[i].timestamp)\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 860,
+        "wires": [
+            [
+                "70447c5009b1dd71"
+            ]
+        ]
+    },
+    {
+        "id": "add063d062806d2a",
+        "type": "switch",
+        "z": "9f8f6a74d0434b79",
+        "name": "温度判断",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "35",
+                "vt": "str"
+            },
+            {
+                "t": "lt",
+                "v": "30",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 880,
+        "y": 240,
+        "wires": [
+            [
+                "c54c79ad67d5ab29"
+            ],
+            [
+                "c2103d55a61ef338"
+            ]
+        ]
+    },
+    {
+        "id": "c54c79ad67d5ab29",
+        "type": "change",
+        "z": "9f8f6a74d0434b79",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"ac_power\":true}",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "group1/gateway001/5/command",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 220,
+        "wires": [
+            [
+                "08d1b397b6fda416"
+            ]
+        ]
+    },
+    {
+        "id": "c2103d55a61ef338",
+        "type": "change",
+        "z": "9f8f6a74d0434b79",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"ac_power\":false}",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "group1/gateway001/5/command",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 260,
+        "wires": [
+            [
+                "08d1b397b6fda416"
+            ]
+        ]
+    },
+    {
+        "id": "ea6cc4515368a23c",
+        "type": "switch",
+        "z": "9f8f6a74d0434b79",
+        "name": "湿度判断",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "75",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 880,
+        "y": 160,
+        "wires": [
+            [
+                "6137123deef0e788"
+            ]
+        ]
+    },
+    {
+        "id": "6137123deef0e788",
+        "type": "change",
+        "z": "9f8f6a74d0434b79",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"ac_power\":true}",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "group1/gateway001/5/command",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 160,
+        "wires": [
+            [
+                "08d1b397b6fda416"
+            ]
+        ]
+    },
+    {
+        "id": "d74f85434f4bf68b",
+        "type": "switch",
+        "z": "9f8f6a74d0434b79",
+        "name": "光照判断",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "700",
+                "vt": "str"
+            },
+            {
+                "t": "lt",
+                "v": "300",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 880,
+        "y": 80,
+        "wires": [
+            [
+                "5ba6bea738071512"
+            ],
+            [
+                "c6f8ca6f8d782223"
+            ]
+        ]
+    },
+    {
+        "id": "5ba6bea738071512",
+        "type": "change",
+        "z": "9f8f6a74d0434b79",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"light\":false}",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "group1/gateway001/4/command",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 60,
+        "wires": [
+            [
+                "08d1b397b6fda416"
+            ]
+        ]
+    },
+    {
+        "id": "c6f8ca6f8d782223",
+        "type": "change",
+        "z": "9f8f6a74d0434b79",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"light\":true}",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "group1/gateway001/4/command",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 100,
+        "wires": [
+            [
+                "08d1b397b6fda416"
+            ]
+        ]
+    },
+    {
+        "id": "3006e9f29a10bd93",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2",
+            "node-red-node-sqlite": "1.1.1"
+        }
+    }
+]

@@ -1,0 +1,4 @@
+var timeStr = msg.payload;
+var endTime = Math.floor(new Date(timeStr).getTime());
+context.flow.set("endTime", endTime);
+return msg;

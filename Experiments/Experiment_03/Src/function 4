@@ -1,0 +1,2 @@
+msg.payload = msg.payload.ac_power;
+return msg;

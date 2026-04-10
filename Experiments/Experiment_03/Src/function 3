@@ -1,0 +1,5 @@
+msg.payload = {
+    "light": msg.payload // msg.payload Îª true »ò false
+};
+msg.topic = "group1/gateway001/4/command"
+return msg;

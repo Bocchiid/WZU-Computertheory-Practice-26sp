@@ -1,0 +1,26 @@
+var gatewayId = context.flow.get("gatewayId");
+var deviceId = context.flow.get("deviceId");
+var startTime = context.flow.get("startTime");
+var endTime = context.flow.get("endTime");
+// 确保所有参数都存在
+if (!gatewayId || !deviceId || !startTime || !endTime) {
+    msg.error = '缺少必要参数';
+    msg.params = {
+        gatewayId: gatewayId,
+        deviceId: deviceId,
+        startTime: startTime,
+        endTime: endTime
+    };
+    return msg;
+}
+// 生成 SQL 语句
+msg.topic = `
+        SELECT timestamp, value
+        FROM sensor_data
+        WHERE gateway_id = '${gatewayId}'
+            AND device_id = '${deviceId}'
+            AND timestamp >= ${startTime}
+            AND timestamp <= ${endTime}
+        ORDER BY timestamp ASC
+`;
+return msg;

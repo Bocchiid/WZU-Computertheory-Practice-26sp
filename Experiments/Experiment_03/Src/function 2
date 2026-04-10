@@ -1,0 +1,2 @@
+msg.payload = msg.payload.light;
+return msg;

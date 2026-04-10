@@ -1,0 +1,40 @@
+// 1. 解析 topic, 提取 gateway_id 和 device_id
+let topicParts = msg.topic.split('/');
+let gatewayId = topicParts[1];
+let deviceId = topicParts[2];
+// 2. 提取数值 (支持 number, boolean, 对象)
+let rawValue = null;
+if (msg.payload !== undefined && msg.payload !== null) {
+    if (typeof msg.payload === 'number') {
+        rawValue = msg.payload;
+    }
+    else if (typeof msg.payload === 'boolean') {
+        rawValue = msg.payload ? 1 : 0;
+    }
+    else if (typeof msg.payload === 'object') {
+        // 取对象的第一个数值 (忽略键名)
+        let values = Object.values(msg.payload);
+        if (values.length > 0) {
+            let firstVal = values[0];
+            if (typeof firstVal === 'number') {
+                rawValue = firstVal;
+            } else if (typeof firstVal === 'boolean') {
+                rawValue = firstVal ? 1 : 0;
+            }
+        }
+    }
+}
+// 3. 校验字段完整性
+if (!gatewayId || !deviceId) {
+    node.warn(`Missing gatewayId or deviceId in topic: ${msg.topic}`);
+    return null;
+}
+if (rawValue === null || isNaN(rawValue)) {
+    node.warn(`Invalid value in payload: ${JSON.stringify(msg.payload)}`);
+    return null;
+}
+// 4. 构造 SQL INSERT 语句
+let timestamp = Date.now();
+let sql = `INSERT INTO sensor_data (timestamp, gateway_id, device_id, value) VALUES (${timestamp}, '${gatewayId}', '${deviceId}', ${rawValue})`;
+msg.topic = sql;
+return msg;

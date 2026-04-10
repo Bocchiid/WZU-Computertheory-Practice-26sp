@@ -1,0 +1,15 @@
+var options = [];
+
+if (msg.payload && msg.payload.length > 0) {
+    msg.payload.forEach(function(row) {
+        if (row.gateway_id) {
+            options.push({
+                label: row.gateway_id,
+                value: row.gateway_id
+            });
+        }
+    });
+}
+
+msg.options = options;
+return msg;

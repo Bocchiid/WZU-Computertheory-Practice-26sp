@@ -1,0 +1,1 @@
+SELECT DISTINCT gateway_id FROM sensor_data ORDER BY gateway_id ASC
