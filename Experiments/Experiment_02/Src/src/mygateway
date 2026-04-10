@@ -25,6 +25,7 @@ stop() {
 
 restart() {
     echo "Restart mygateway!"
-    service_stop /usr/bin/mygateway
-    service_start /usr/bin/mygateway &
+    stop
+    sleep 2  # 确保完全停止
+    start
 }
